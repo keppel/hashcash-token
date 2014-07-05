@@ -1,0 +1,17 @@
+{
+  "name": "hashcash-token",
+  "version": "0.0.0",
+  "description": "Generate proof-of-work tokens",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "hashcash"
+  ],
+  "author": "Kepzorz",
+  "license": "ISC",
+  "dependencies": {
+    "sha256": "^0.1.1"
+  }
+}
