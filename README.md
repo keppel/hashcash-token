@@ -27,6 +27,10 @@ easily configure the amount of work proven by each token by requiring the target
   hashcashToken.validate(token, {
     difficulty: 5000 // minimum difficulty. token difficulty just has to be greater than 5000
   }) // true
+
+  var isRareEnough = hashcashToken.validate(token, {
+    rarity: 15000
+  }) // true sometimes, false sometimes.
 ```
 
 # methods
@@ -48,11 +52,13 @@ and will return a token like
     difficulty: 10000,
     data: 'woot',  
     nonce: 5798283827805,
+    rarity: 19250.060837947112,
     hash: '0000692aeec5132190df5dcb819ab33590b6a15e46b9348ef41b08758a0d4f5b' 
   }
 ```
 where the hash is sufficiently low. Note that this is a blocking operation that can potentially take a long time.
 
+* `token.rarity` - represents the average number of hashes required to find a hash at least as small as this token's.
 
 ## var isValid = hashcashToken.validate(token, constraints)
 returns ```true``` or ```false```
@@ -60,6 +66,7 @@ returns ```true``` or ```false```
 constraints: 
 * `constraints.difficulty` - the token's difficulty has to be greater than this number.
 * `constraints.data` - the token's data must === this. Just a little convenience.
+* `constraints.rarity` - the token's rarity must be greater than this number.
 
 # install
 

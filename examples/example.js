@@ -31,3 +31,8 @@ hashcashToken.validate(token, {
 hashcashToken.validate(token, {
   data: "bloop"
 }) // false
+
+var isRareEnough = hashcashToken.validate(token, {
+  rarity: 15000
+}) // true sometimes, false sometimes.
+console.log(isRareEnough)
