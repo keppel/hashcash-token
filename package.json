@@ -1,6 +1,6 @@
 {
   "name": "hashcash-token",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Generate proof-of-work tokens",
   "main": "index.js",
   "scripts": {
