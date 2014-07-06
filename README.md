@@ -51,7 +51,7 @@ and will return a token like
     hash: '0000692aeec5132190df5dcb819ab33590b6a15e46b9348ef41b08758a0d4f5b' 
   }
 ```
-where the nonce is sufficiently low. Note that this is a blocking operation that can potentially take a long time.
+where the hash is sufficiently low. Note that this is a blocking operation that can potentially take a long time.
 
 
 ## var isValid = hashcashToken.validate(token, constraints)
